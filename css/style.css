@@ -2,46 +2,46 @@
     padding: 0;
     margin: 0;
 }   
+
 .menu{
     height: 40vh;
     width: 20vw;
     background: hotpink;
-    position: fixed;
-    top: 0;
+    position: fixed;    
     right: -90vw;
     transition: right 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
     top: 10vh;
+    
 }
-.close{
-    height: 10vh;
-    width: 10vw;
-    position: fixed;
-    top: 0;
-    right: -90vw;
-    transition: right 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
-}
+
 .menu-button{
     cursor: pointer;
     display: inline;
-}
-
-.close-button{
-    cursor: pointer;
  
 }
 
-.close-button i.material-icons{
+.close{
+    cursor: pointer;
+    z-index: 11;  
+
+    display: none;
+  
+}
+
+.close i.material-icons{
     font-size: 10vh;
 }
 
 .menu-button i.material-icons{
     font-size: 10vh;
+
 }
 
+.invisible{
+    display: none;
+}
 .show{
     right: 0;
 }
@@ -58,6 +58,9 @@
     top: 10vh;
 }
 
+.close.visible{
+    display: block;
+}
 .fade-layer.visible{
     display: block;
 }
