@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: rgb(230, 191, 131);
+
 }   
 
 .menu{
@@ -25,18 +27,18 @@
 .close{
     cursor: pointer;
     z-index: 11;  
-
     display: none;
   
 }
 
 .close i.material-icons{
-    font-size: 10vh;
+    font-size: 10.5vh;
+    background-color: rgb(222, 214, 129);
 }
 
 .menu-button i.material-icons{
-    font-size: 10vh;
-
+    font-size: 10.5vh;  
+    background-color: rgb(222, 214, 129);
 }
 
 .invisible{
@@ -80,12 +82,18 @@ header{
     display: grid;
     grid-template-areas: 
     'ru nav';
-    grid-template-columns: 1fr 5vw;
+    grid-template-columns: 93.8vw 1fr;
+    grid-template-rows: 10.5vh;
+    position: fixed;
 }
 
 #rubrik{
     grid-area: ru;
-    background-color: aquamarine;
+    background-color: rgb(222, 214, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+   
 }
 
 nav{
@@ -94,10 +102,56 @@ nav{
 
 section{
     grid-area: sc;
+    display: flex;
+    align-items: center;
+    margin: 5vh 10vh 10vh 10vh;
+
 }
 #sortering{
     grid-area: sor;
+    justify-self: center;
+    align-items: center;
+
 }
+button{
+    height: 5vh;
+    cursor: pointer;
+    
+}
+
 main{
     grid-area: main;
+    display: grid;
+    grid-template-areas: 'list';
+    justify-content: center;
 }
+.brödtext{
+    font-size: 3.5vh;
+}
+.list{
+    grid-area: list;
+    width: 80vw;
+}
+table{
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid black;
+}
+
+td:hover{
+    background-color: aquamarine;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+td{
+    font-size: 4vh;
+}
+th{
+    font-size: 5vh;
+}
+
