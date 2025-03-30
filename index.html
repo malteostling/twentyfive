@@ -9,28 +9,35 @@
 </head>
 
 
-<div class="menu"></div>
+<div class="menu">
+  <ul class="navlist">
+    <li class="navlink"><a href="sida2.html" class="navtext">sida2</a></li>
+    <li class="navlink"><a href="sida3.html" class="navtext">sida3</a></li>
+    <li class="navlink"><a href="sida4.html" class="navtext">sida4</a></li>
+  </ul>
+</div>
 <div class="fade-layer" ></div>
 
 
 <body>
+  <header>
+    <div id="rubrik">
+      KPK
+    </div>
+    <nav>         
+      <div class="menu-button">
+      <i class="material-icons" >menu </i></div>
+
+      <div class="close" >
+      <i class="material-icons" >close</i></div> 
+  </nav>
+
+  </header>
   <div id="wrapper">
-    <header>
-      <div id="rubrik">
-        KPK
-      </div>
-      <nav>         
-        <div class="menu-button">
-        <i class="material-icons" >menu </i></div>
-
-        <div class="close" >
-        <i class="material-icons" >close</i></div> 
-    </nav>
-
-    </header>
     <section id="section">
       <p class="brödtext">KPK, koffein per krona, är ett mått som används för att jämföra hur mycket koffein man får för pengarna i olika drycker, såsom kaffe och energidrycker. Genom att dela koffeinhalten (i mg) med priset (i kronor) kan man se vilken dryck som ger mest koffein per spenderad krona. En hög KPK betyder mer koffein för pengarna, medan en låg KPK innebär att drycken är dyrare i förhållande till koffeinhalten.</p>
     </section>
+    <div class="wavy-line" id="wave"></div>
     <div id="sortering">
       <button class="button1">lägsta priset</button>
       <button class="button2">högsta KPK</button>
@@ -38,14 +45,19 @@
       
     </div>
     <main>
+
+
       <div class="list">
         <table id="Table">
+
+
           <tr>
             <th>Produckt</th>
             <th>Koffeinhalt</th>
             <th>Pris</th>
             <th>KPK</th>
           </tr>
+
           <tr>
             <td>Kaffe</td>
             <td>15</td>

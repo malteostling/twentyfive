@@ -9,12 +9,16 @@
     height: 40vh;
     width: 20vw;
     background: hotpink;
-    position: fixed;    
+    position: fixed;   
     right: -90vw;
     transition: right 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
     top: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 10px 10px 10px;
+    align-content: space-evenly;
     
 }
 
@@ -39,6 +43,7 @@
 .menu-button i.material-icons{
     font-size: 10.5vh;  
     background-color: rgb(222, 214, 129);
+    
 }
 
 .invisible{
@@ -75,6 +80,7 @@
     'sor'
     'main';
     grid-template-rows: 10vh 27vh 15vh 70vh;
+
 }
 
 header{
@@ -85,6 +91,7 @@ header{
     grid-template-columns: 93.8vw 1fr;
     grid-template-rows: 10.5vh;
     position: fixed;
+    z-index: 6;
 }
 
 #rubrik{
@@ -98,6 +105,7 @@ header{
 
 nav{
     grid-area: nav;
+    width: 100%;
 }
 
 section{
@@ -105,13 +113,19 @@ section{
     display: flex;
     align-items: center;
     margin: 5vh 10vh 10vh 10vh;
+    z-index: 5;
 
 }
 #sortering{
     grid-area: sor;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
+    justify-self: space-around;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+ z-index: 5;
 }
 button{
     height: 5vh;
@@ -131,6 +145,7 @@ main{
 .list{
     grid-area: list;
     width: 80vw;
+    z-index: 5;
 }
 table{
     width: 100%;
@@ -154,4 +169,53 @@ td{
 th{
     font-size: 5vh;
 }
+button{
+    font-size: 4vh;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    align-items: center ;
+}
+.navlist{
+    background-color: hotpink;
+    color: hotpink;
+}
+.navtext{
+    background-color: hotpink;
+    text-decoration: none;
+    font-size: 3vh;
+    color: black;
+}
 
+/* tagen av https://css-shape.com/wavy-line/   */
+.wavy-line {
+     
+    --s:75px; /* size of the wave */
+    --b: 20px; /* thickness of the line */
+    --m: 1; /* curvature of the wave [0 2] */
+    width: 110%;
+  
+
+    background: #614521;
+    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+    height: calc(2*var(--R));
+
+    --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+    mask:
+      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) 
+       calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+      radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)),var(--_g)) 
+       50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+    
+  }
+  
+  
+#wave{
+    margin-top: 300px;
+    z-index: 1;
+    transform: translateX(-50px);
+}
+    
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

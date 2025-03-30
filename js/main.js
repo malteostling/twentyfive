@@ -92,3 +92,11 @@ function Sortkoffin() {
       }
 
 }
+
+function InsertRow(namn,koffin,pris){
+  let table = document.getElementById("Table")
+  let row = table.InsertRow()
+  row.insertCell(0).textcontent = namn
+  row.insertCell(1).textcontent = koffin
+  row.insertCell(2).textcontent = pris
+}
