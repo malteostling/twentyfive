@@ -7,8 +7,8 @@
 
 .menu{
     height: 40vh;
-    width: 20vw;
-    background: hotpink;
+    width: 15vw;
+    background: rgb(222, 214, 129);
     position: fixed;   
     right: -90vw;
     transition: right 0.3s;
@@ -101,7 +101,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: center ;
-   
+}
+.rubriktext{
+    transform: translate(5vw);
+    background-color: rgb(222, 214, 129);
 }
 
 nav{
@@ -112,7 +115,24 @@ nav{
     background-color:  rgb(222, 214, 129);
     justify-content: center;
 }
-
+.navtext{
+    background-color:  rgb(222, 214, 129);
+    text-decoration: none;
+    font-size: 3vh;
+    color: black;
+    width: 100%;
+}
+.navlink{
+    background-color:rgb(222, 214, 129);
+}
+.navlist{
+    background-color:  rgb(222, 214, 129);
+    color: rgb(222, 214, 129);
+    display: flex;
+    flex-direction: column  ;
+    list-style-type: none;
+    gap: 1vh;
+}
 section{
     grid-area: sc;
     display: flex;
@@ -201,16 +221,7 @@ th{
     font-size: 5vh;
 }
 
-.navlist{
-    background-color: hotpink;
-    color: hotpink;
-}
-.navtext{
-    background-color: hotpink;
-    text-decoration: none;
-    font-size: 3vh;
-    color: black;
-}
+
 .curv{
     position: absolute;
     height: 225px;
@@ -243,6 +254,107 @@ th{
     transform: translate(90%, -76.8%);
 }
 
+#wrapper2{
+    display: grid;
+    grid-template-areas: 
+    
+    'hd'
+    'ud1'
+    'sc21'
+    'buffer'
+    'ud2'
+    'sc22'
+    ;
+    grid-template-rows: 10.5vh 20vh 40vh 20vh 20vh 40vh;
+    width: 100vw;
+   
+}
+
+#underrubrik1{
+    grid-area: ud1;
+    background-color: rgb(230, 191, 131);   
+
+}
+
+#underrubrik2{
+    grid-area: ud2;
+    z-index: 10;
+}
+.underrubrik{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#section21{
+    grid-area:  sc21;
+    background-color: rgb(230, 191, 131);
+    display: flex;
+    flex-direction: column;
+}
+
+#section22{
+    grid-area:  sc22;
+    background-color:  rgb(72, 57, 14);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.buffer{
+    grid-area: buffer;
+}
+
+
+.underrubriktext{
+    background-color: transparent;
+    font-size: 5vh;
+}
+.sectionbrodtext1{
+    font-size: 3vh;
+    background-color:rgb(230, 191, 131);
+}
+.fordelarlist li{
+    
+    background-color:rgb(230, 191, 131);
+}
+#sectionbrodtext2{
+    font-size: 3vh;
+
+}
+
+.curv2{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+    background-color: none;
+
+}
+
+.curv2::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  rgb(230, 191, 131);
+    z-index: 3;
+    transform: translate(-5%, -30%);
+}
+.curv2::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  rgb(72, 57, 14);
+    z-index: 8;
+    transform: translate(90.7%, -29.5%);
+}
 
 html, body {
     max-width: 100%;
