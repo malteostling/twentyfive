@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: rgb(230, 191, 131);
+    background-color:  rgb(72, 57, 14);
 
 }   
 
@@ -13,7 +13,7 @@
     right: -90vw;
     transition: right 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
+    z-index: 100;
     top: 10vh;
     display: flex;
     flex-direction: row-reverse;
@@ -55,14 +55,15 @@
 
 .fade-layer{
     position: fixed;
-    top: 0;
+    
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     display: none;
-    z-index: 5;
-    top: 10vh;
+    z-index: 80;
+    height: 150%;
+    
 }
 
 .close.visible{
@@ -88,10 +89,10 @@ header{
     display: grid;
     grid-template-areas: 
     'ru nav';
-    grid-template-columns: 93.8vw 1fr;
+    grid-template-columns: 90vw 10vw;
     grid-template-rows: 10.5vh;
     position: fixed;
-    z-index: 6;
+    z-index: 80 ;
 }
 
 #rubrik{
@@ -106,16 +107,21 @@ header{
 nav{
     grid-area: nav;
     width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:  rgb(222, 214, 129);
+    justify-content: center;
 }
 
 section{
     grid-area: sc;
     display: flex;
     align-items: center;
-    margin: 5vh 10vh 10vh 10vh;
-    z-index: 5;
-
+    padding: 5vh 10vh 10vh 10vh;
+    z-index: 8;
+    background-color:  rgb(230, 191, 131);
 }
+
 #sortering{
     grid-area: sor;
     display: flex;
@@ -125,33 +131,57 @@ section{
     gap: 40px;
     width: 100%;
     height: 100%;
- z-index: 5;
+    background-color: rgb(230, 191, 131);
+   
+
 }
 button{
     height: 5vh;
-    cursor: pointer;
-    
+    font-size: 4vh;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    align-items: center ;
+    z-index: 10;
+    cursor: pointer;    
+    background-color: antiquewhite;
 }
+
 
 main{
     grid-area: main;
     display: grid;
     grid-template-areas: 'list';
     justify-content: center;
+    background-color:  rgb(72, 57, 14);
+    padding: 5% 0 0 0;
+   
 }
 .brödtext{
     font-size: 3.5vh;
+    background-color: rgb(230, 191, 131);
+    width: 100%;
+}
+tbody{
+    z-index: 6;
 }
 .list{
     grid-area: list;
     width: 80vw;
-    z-index: 5;
+    z-index: 70;
+    display: flex;
+    background-color:  rgb(72, 57, 14);
+  
+   
 }
-table{
+#Table{
     width: 100%;
+
+    z-index: 14;
+    background-color:  rgb(72, 57, 14);
 }
 table, th, td{
     border: 1px solid black;
+    z-index: 15;
 }
 
 td:hover{
@@ -161,6 +191,7 @@ td:hover{
 th, td {
     text-align: left;
     padding: 8px;
+    background-color: rgb(230, 191, 131);
   }
 
 td{
@@ -169,12 +200,7 @@ td{
 th{
     font-size: 5vh;
 }
-button{
-    font-size: 4vh;
-    padding: 5px 5px 5px 5px;
-    display: flex;
-    align-items: center ;
-}
+
 .navlist{
     background-color: hotpink;
     color: hotpink;
@@ -185,36 +211,39 @@ button{
     font-size: 3vh;
     color: black;
 }
+.curv{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+    background-color: none;
 
-/* tagen av https://css-shape.com/wavy-line/   */
-.wavy-line {
-     
-    --s:75px; /* size of the wave */
-    --b: 20px; /* thickness of the line */
-    --m: 1; /* curvature of the wave [0 2] */
-    width: 110%;
-  
-
-    background: #614521;
-    --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
-    height: calc(2*var(--R));
-
-    --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
-    mask:
-      radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) 
-       calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
-      radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)),var(--_g)) 
-       50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
-    
-  }
-  
-  
-#wave{
-    margin-top: 300px;
-    z-index: 1;
-    transform: translateX(-50px);
 }
-    
+
+.curv::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  rgb(230, 191, 131);
+    z-index: 3;
+    transform: translate(-5%, -80%);
+}
+.curv::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  rgb(72, 57, 14);
+    z-index: 8;
+    transform: translate(90%, -76.8%);
+}
+
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
