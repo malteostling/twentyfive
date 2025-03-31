@@ -157,7 +157,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: space-around;
     gap: 40px;
     width: 100%;
     height: 100%;
@@ -241,7 +240,7 @@ th{
     height: 225px;
     width: 100%;
     bottom: 0;
-    background-color: none;
+    background-color: transparent;
 
 }
 
@@ -363,7 +362,7 @@ th{
     height: 225px;
     width: 100%;
     bottom: 0;
-    background-color: none;
+    background-color: transparent;
 
 }
 
@@ -562,7 +561,10 @@ html, body {
         padding: 3vh 2vh 2vh 2vh;
     }
     .brödtext{
-        font-size: 2.5vh;
+        font-size: 2vh;
+    }
+    button{
+        font-size: 3vh;
     }
     tr th:nth-child(2),tr td:nth-child(2){
 
@@ -573,6 +575,10 @@ html, body {
     }
     .menu{
         width: 40vw;
+      
+    }
+    .navlist{
+        gap: 4vh;
     }
     .curv::before{
         transform: translate(-5%, -35vh);
@@ -633,24 +639,23 @@ html, body {
         padding: 0vh 7vh 0vh 7vh;
     }
     #underrubriktext3{
-        font-size: 5vh;
+        font-size: 4.4vh;
     }
     #underrubrik4{
         padding: 4vh 2vh 0 2vh;
         gap: 1vh;
         margin: 0;
-        align-items: none;
         justify-content: start;
     }
     .brodtext{
         font-size: 2.5vh;
     }
     #main3{
-        grid-template-rows: 80vh 70vh 70vh;
+        grid-template-rows: 100vh 80vh 80vh;
     }
 
     #wrapper3{
-        grid-template-rows: 10.5vh 60vh 20vh 220vh;
+        grid-template-rows: 10.5vh 60vh 20vh 260vh;
     }
     .personrubrik{
         font-size: 3vh;
