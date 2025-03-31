@@ -111,6 +111,8 @@ header{
 .rubriktext{
     transform: translate(5vw);
     background-color: var(--navfarg);
+    font-size: 7vh;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 nav{
@@ -128,6 +130,7 @@ nav{
     font-size: 3vh;
     color: black;
     width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .navlink{
     background-color: var(--navfarg);
@@ -144,7 +147,7 @@ section{
     grid-area: sc;
     display: flex;
     align-items: center;
-    padding: 5vh 10vh 10vh 10vh;
+    padding: 10vh 20vh 10vh 20vh;
     z-index: 8;
     background-color:  var(--bakgrundsfarg);
 }
@@ -159,6 +162,7 @@ section{
     width: 100%;
     height: 100%;
     background-color: var(--bakgrundsfarg);
+
    
 
 }
@@ -171,6 +175,7 @@ button{
     z-index: 10;
     cursor: pointer;    
     background-color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -187,6 +192,7 @@ main{
     font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
     width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 tbody{
     z-index: 6;
@@ -223,6 +229,7 @@ th, td {
 
 td{
     font-size: 4vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 th{
     font-size: 5vh;
@@ -289,10 +296,12 @@ th{
     color: var(--bakgrundsfarg);
 }
 .underrubrik{
-    height: 100%;
+
+    font-size: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5vh;
 
 }
 #section21{
@@ -300,6 +309,8 @@ th{
     background-color: var(--bakgrundsfarg);
     display: flex;
     flex-direction: column;
+    gap: 2vh;
+    padding-top: 0;
 }
 
 #section22{
@@ -307,7 +318,8 @@ th{
     background-color:  rgb(72, 57, 14);
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 2vh;
+    padding-top: 0;
 }
 
 .buffer{
@@ -401,7 +413,124 @@ th{
     display: flex;
     flex-direction: column;
     transform: translate(0, -30vh);
+    
 }
+
+#wrapper3{
+    display: grid;
+    grid-template-areas: 
+    'hd'
+    'ur4'
+    'curv3'
+    'mn3';
+    grid-template-rows: 10.5vh 60vh 20vh 140vh;
+}
+#underrubrik4{
+    grid-area: ur4;
+    background-color: var(--bakgrundsfarg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0vh 30vh 15vh 30vh;
+    gap:4vh;
+
+}
+
+#main3{
+    grid-area: mn3;
+    display: grid;
+    grid-template-areas: 
+    'per1'
+    'per2'
+    'per3'
+    ;
+   grid-template-columns: 95%;
+    grid-template-rows: 44vh 44vh 44vh;
+    overflow: hidden;
+
+}
+
+#person1{
+    grid-area: per1;
+    padding: 0 5vw 0 ;
+    margin: 5vh 5vh 5vh 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    border-radius: 100vh;
+}
+#person2{
+    grid-area: per2;
+    padding: 0 5vw 0 ;
+    margin: 5vh 5vh 5vh 5vh;    
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    border-radius: 100vh;
+}
+#person3{
+    grid-area: per3;
+    padding: 0 5vw 0 ;
+    margin: 5vh 5vh 5vh 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    border-radius: 100vh;
+}
+
+.brodtext{
+    background-color: transparent;
+    font-size: 3vh;
+}
+.persontext{
+    background: transparent;
+    border:dashed black;
+   padding: 3vh 3vh 3vh 3vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.personrubrik{
+    background-color: transparent;
+    font-size: 4vh;
+    margin-top: 1vh;
+}
+
+
+.curv3{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+    background-color: transparent;
+
+}
+
+.curv3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  rgb(72, 57, 14);
+    z-index: 3;
+    transform: translate(-5%, -30%);
+}
+.curv3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color:  var(--bakgrundsfarg);
+    z-index: 8;
+    transform: translate(90.7%, -29.5%);
+}
+
 
 
 
