@@ -3,7 +3,7 @@
     margin: 0;
     background-color:  rgb(72, 57, 14);
     --navfarg: rgb(219, 208, 195);
-    --bakgrundsfarg: rgb(241, 239, 216);
+    --bakgrundsfarg: rgb(220, 220, 211);
 
 }   
 
@@ -174,7 +174,7 @@ button{
     align-items: center ;
     z-index: 10;
     cursor: pointer;    
-    background-color: antiquewhite;
+    background-color: var(--navfarg);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -280,6 +280,7 @@ th{
     'sc22'
     ;
     grid-template-rows: 10.5vh 20vh 40vh 20vh 20vh 40vh;
+
     width: 100vw;
    
 }
@@ -329,23 +330,32 @@ th{
 
 .underrubriktext{
     background-color: transparent;
-    font-size: 5vh;
+    font-size: 7vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sectionbrodtext1{
-    font-size: 3vh;
+    font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .fordelarlist li{
-    font-size: 3vh;
+    font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.fordelarlist{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
 }
 .sectionbrodtext2{
-    font-size: 3vh;
+    font-size: 3.5vh;
     color: var(--bakgrundsfarg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .nackdelarlist{
     color: var(--bakgrundsfarg);
-    font-size: 3vh;
+    font-size: 3.5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .curv2{
@@ -393,7 +403,7 @@ th{
 }
 #underrubrik3{
     grid-area: ur3;
-    background: rgb(241,239,216);
+    background: var(--bakgrundsfarg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,10 +412,11 @@ th{
 #underrubriktext3{
     background-color: transparent;
     font-size: 10vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .gradient{
     grid-area: gra;
-    background: linear-gradient(180deg, rgba(241,239,216,1) 0%, rgba(72,57,14,1) 35%)
+    background: linear-gradient(180deg, rgba(220,220,211,1) 0%, rgba(72,57,14,1) 35%);
 }
 #section31{
     grid-area: sc31;
@@ -482,20 +493,24 @@ th{
 .brodtext{
     background-color: transparent;
     font-size: 3vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .persontext{
     background: transparent;
     border:dashed black;
    padding: 3vh 3vh 3vh 3vh;
+   margin-top: 3vh;
    display: flex;
    justify-content: center;
    align-items: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    
 }
 .personrubrik{
     background-color: transparent;
     font-size: 4vh;
-    margin-top: 1vh;
+    margin-top: 2vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -537,4 +552,111 @@ th{
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px){
+    header{
+        grid-template-columns: 80vw 20vw ;
+    }
+    section{
+        padding: 3vh 2vh 2vh 2vh;
+    }
+    .brödtext{
+        font-size: 2.5vh;
+    }
+    tr th:nth-child(2),tr td:nth-child(2){
+
+        display:none;
+      }
+    .button3{
+        display: none;
+    }
+    .menu{
+        width: 40vw;
+    }
+    .curv::before{
+        transform: translate(-5%, -35vh);
+    }
+    .curv::after{
+        transform: translate(87%, -92%);
+    }
+
+    .rubriktext{
+        font-size: 3vh;
+        transform: translate(7vw);
+    }
+
+    .underrubriktext{
+        font-size: 5vh;
+    }
+    .sectionbrodtext1{
+        transform: translate(0, -5vh);
+        font-size: 3vh;
+    }
+    .fordelarlist{
+        transform: translate(0, -5vh);
+        font-size: 2.5vh;
+
+    }
+    .nackdelarlist li{
+
+    font-size: 3vh;
+    }
+
+    .sectionbrodtext2{
+
+    font-size: 3vh;
+    }
+    .curv2{display: none;}
+    #underrubrik2{
+        margin: 0;
+        padding: 0;
+    }
+    .buffer{
+        display: none;
+    }
+    #wrapper2{
+        grid-template-areas: 
+            
+    'hd'
+    'ud1'
+    'sc21'
+    'ud2'
+    'sc22';
+    grid-template-rows: 10.5vh 20vh 50vh  20vh 60vh;
+    }
+
+    #section21{
+        padding: 0vh 7vh 0vh 7vh;
+    }
+    #section22{
+        padding: 0vh 7vh 0vh 7vh;
+    }
+    #underrubriktext3{
+        font-size: 5vh;
+    }
+    #underrubrik4{
+        padding: 4vh 2vh 0 2vh;
+        gap: 1vh;
+        margin: 0;
+        align-items: none;
+        justify-content: start;
+    }
+    .brodtext{
+        font-size: 2.5vh;
+    }
+    #main3{
+        grid-template-rows: 80vh 70vh 70vh;
+    }
+
+    #wrapper3{
+        grid-template-rows: 10.5vh 60vh 20vh 220vh;
+    }
+    .personrubrik{
+        font-size: 3vh;
+    }
+    #main3 section{
+        border-radius: 0;
+    }
+    
 }
