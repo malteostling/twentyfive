@@ -2,13 +2,15 @@
     padding: 0;
     margin: 0;
     background-color:  rgb(72, 57, 14);
+    --navfarg: rgb(219, 208, 195);
+    --bakgrundsfarg: rgb(241, 239, 216);
 
 }   
 
 .menu{
     height: 40vh;
     width: 15vw;
-    background: rgb(222, 214, 129);
+    background: var(--navfarg);
     position: fixed;   
     right: -90vw;
     transition: right 0.3s;
@@ -30,19 +32,19 @@
 
 .close{
     cursor: pointer;
-    z-index: 11;  
+    z-index: 11; 
     display: none;
   
 }
 
 .close i.material-icons{
     font-size: 10.5vh;
-    background-color: rgb(222, 214, 129);
+    background-color: var(--navfarg);
 }
 
 .menu-button i.material-icons{
     font-size: 10.5vh;  
-    background-color: rgb(222, 214, 129);
+    background-color: var(--navfarg);
     
 }
 
@@ -81,6 +83,8 @@
     'sor'
     'main';
     grid-template-rows: 10vh 27vh 15vh 70vh;
+    gap: 0;
+  
 
 }
 
@@ -93,41 +97,44 @@ header{
     grid-template-rows: 10.5vh;
     position: fixed;
     z-index: 80 ;
+    margin: 0px;
+    
 }
 
 #rubrik{
     grid-area: ru;
-    background-color: rgb(222, 214, 129);
+    background-color:   var(--navfarg);
     display: flex;
     align-items: center;
     justify-content: center ;
 }
 .rubriktext{
     transform: translate(5vw);
-    background-color: rgb(222, 214, 129);
+    background-color: var(--navfarg);
 }
 
 nav{
     grid-area: nav;
     width: 100%;
+    
     display: flex;
     flex-direction: row-reverse;
-    background-color:  rgb(222, 214, 129);
+    background-color:  var(--navfarg);
     justify-content: center;
 }
 .navtext{
-    background-color:  rgb(222, 214, 129);
+    background-color:  var(--navfarg);
     text-decoration: none;
     font-size: 3vh;
     color: black;
     width: 100%;
 }
 .navlink{
-    background-color:rgb(222, 214, 129);
+    background-color: var(--navfarg);
 }
 .navlist{
-    background-color:  rgb(222, 214, 129);
-    color: rgb(222, 214, 129);
+    background-color:  var(--navfarg);
+    color: var(--navfarg);
     display: flex;
     flex-direction: column  ;
     list-style-type: none;
@@ -139,7 +146,7 @@ section{
     align-items: center;
     padding: 5vh 10vh 10vh 10vh;
     z-index: 8;
-    background-color:  rgb(230, 191, 131);
+    background-color:  var(--bakgrundsfarg);
 }
 
 #sortering{
@@ -151,7 +158,7 @@ section{
     gap: 40px;
     width: 100%;
     height: 100%;
-    background-color: rgb(230, 191, 131);
+    background-color: var(--bakgrundsfarg);
    
 
 }
@@ -178,7 +185,7 @@ main{
 }
 .brödtext{
     font-size: 3.5vh;
-    background-color: rgb(230, 191, 131);
+    background-color: var(--bakgrundsfarg);
     width: 100%;
 }
 tbody{
@@ -204,14 +211,14 @@ table, th, td{
     z-index: 15;
 }
 
-td:hover{
-    background-color: aquamarine;
+td:hover, th:hover{
+    background-color: rgb(243, 197, 91);
 }
 
 th, td {
     text-align: left;
     padding: 8px;
-    background-color: rgb(230, 191, 131);
+    background-color: var(--bakgrundsfarg);
   }
 
 td{
@@ -238,7 +245,7 @@ th{
     border-radius: 100% 50%;
     width: 55%;
     height: 100%;
-    background-color:  rgb(230, 191, 131);
+    background-color:  var(--bakgrundsfarg);
     z-index: 3;
     transform: translate(-5%, -80%);
 }
@@ -272,13 +279,14 @@ th{
 
 #underrubrik1{
     grid-area: ud1;
-    background-color: rgb(230, 191, 131);   
+    background-color: var(--bakgrundsfarg);   
 
 }
 
 #underrubrik2{
     grid-area: ud2;
     z-index: 10;
+    color: var(--bakgrundsfarg);
 }
 .underrubrik{
     height: 100%;
@@ -289,7 +297,7 @@ th{
 }
 #section21{
     grid-area:  sc21;
-    background-color: rgb(230, 191, 131);
+    background-color: var(--bakgrundsfarg);
     display: flex;
     flex-direction: column;
 }
@@ -313,15 +321,19 @@ th{
 }
 .sectionbrodtext1{
     font-size: 3vh;
-    background-color:rgb(230, 191, 131);
+    background-color: var(--bakgrundsfarg);
 }
 .fordelarlist li{
-    
-    background-color:rgb(230, 191, 131);
-}
-#sectionbrodtext2{
     font-size: 3vh;
-
+    background-color: var(--bakgrundsfarg);
+}
+.sectionbrodtext2{
+    font-size: 3vh;
+    color: var(--bakgrundsfarg);
+}
+.nackdelarlist{
+    color: var(--bakgrundsfarg);
+    font-size: 3vh;
 }
 
 .curv2{
@@ -340,7 +352,7 @@ th{
     border-radius: 100% 50%;
     width: 55%;
     height: 100%;
-    background-color:  rgb(230, 191, 131);
+    background-color:  var(--bakgrundsfarg);
     z-index: 3;
     transform: translate(-5%, -30%);
 }
@@ -355,6 +367,43 @@ th{
     z-index: 8;
     transform: translate(90.7%, -29.5%);
 }
+
+#wrapper4{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'hd'
+    'ur3'
+    'gra'
+    'sc31'
+    ;
+    grid-template-rows: 10.5vh 30vh 50vh 50vh;
+}
+#underrubrik3{
+    grid-area: ur3;
+    background: rgb(241,239,216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#underrubriktext3{
+    background-color: transparent;
+    font-size: 10vh;
+}
+.gradient{
+    grid-area: gra;
+    background: linear-gradient(180deg, rgba(241,239,216,1) 0%, rgba(72,57,14,1) 35%)
+}
+#section31{
+    grid-area: sc31;
+    background-color: rgb(72, 57, 14);
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, -30vh);
+}
+
+
 
 html, body {
     max-width: 100%;
