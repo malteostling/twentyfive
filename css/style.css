@@ -84,7 +84,7 @@
     'main'
     'mellan'
     'foot';
-    grid-template-rows: 10vh 27vh 15vh 70vh 20vh 20vh;
+    grid-template-rows: 10vh 27vh 15vh 70vh 20vh 25vh;
     gap: 0;
     width: 100vw;
   
@@ -96,14 +96,44 @@
 footer{
     grid-area: foot;
     background-color: var(--bakgrundsfarg);
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    'divfotbilder'
+     'divfottext'
+    ;
+
+
 
 }
+.divfotbilder{
+    grid-area: divfotbilder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bakgrundsfarg);
+    padding: 2vh 2vh 2vh 2vh;
+
+}
+.divfottext{
+    grid-area: divfottext;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bakgrundsfarg);
+    flex-direction: column;
+    padding: 1vh 1vh 1vh 1vh;
+}
 .fotbild{
-    height: 20vh;
+    height: 14vh;
+    background-color: var(--bakgrundsfarg);
+}
+.fottext{
+    background-color: var(--bakgrundsfarg);
+}
+.fotlank{
+    background-color: var(--bakgrundsfarg);
+    text-decoration: none;
+    color: black;
 }
 
 #fotbild1{
@@ -128,7 +158,8 @@ header{
     background-color:   var(--navfarg);
     display: flex;
     align-items: center;
-    justify-content: center ;
+    padding: 2vw 2vw 2vw 2vw;
+
 }
 .rubriktext{
     transform: translate(5vw);
@@ -145,7 +176,13 @@ nav{
     flex-direction: row-reverse;
     background-color:  var(--navfarg);
     justify-content: center;
+
 }
+.kaffeloga{
+    height: 7vh;
+    background-color: var(--navfarg);
+}
+
 .navtext{
     background-color:  var(--navfarg);
     text-decoration: none;
@@ -153,6 +190,7 @@ nav{
     color: black;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 .navlink{
     background-color: var(--navfarg);
@@ -169,7 +207,7 @@ section{
     grid-area: sc;
     display: flex;
     align-items: center;
-    padding: 10vh 20vh 10vh 20vh;
+    padding: 10vh 22vh 10vh 22vh;
     z-index: 8;
     background-color:  var(--bakgrundsfarg);
 }
@@ -299,8 +337,9 @@ th{
     'buffer'
     'ud2'
     'sc22'
+    'foot'
     ;
-    grid-template-rows: 10.5vh 20vh 40vh 20vh 20vh 40vh;
+    grid-template-rows: 10.5vh 20vh 40vh 20vh 20vh 40vh 25vh;
 
     width: 100vw;
    
@@ -419,8 +458,9 @@ th{
     'ur3'
     'gra'
     'sc31'
+    'foot'
     ;
-    grid-template-rows: 10.5vh 30vh 50vh 50vh;
+    grid-template-rows: 10.5vh 30vh 50vh 50vh 25vh;
 }
 #underrubrik3{
     grid-area: ur3;
@@ -454,8 +494,9 @@ th{
     'hd'
     'ur4'
     'curv3'
-    'mn3';
-    grid-template-rows: 10.5vh 60vh 20vh 140vh;
+    'mn3'
+    'foot';
+    grid-template-rows: 10.5vh 60vh 20vh 1fr 25vh;
 }
 #underrubrik4{
     grid-area: ur4;
@@ -478,18 +519,24 @@ th{
     'per3'
     ;
    grid-template-columns: 95%;
-    grid-template-rows: 44vh 44vh 44vh;
+    grid-template-rows: 102vh 102vh 102vh;
     overflow: hidden;
 
 }
-
+.personbild{
+    height: 50vh;
+    background-color: var(--bakgrundsfarg);
+    border: black dotted 1vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
 #person1{
     grid-area: per1;
     padding: 0 5vw 0 ;
     margin: 5vh 5vh 5vh 5vh;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 7vh;
     border-radius: 100vh;
 }
 #person2{
@@ -498,7 +545,7 @@ th{
     margin: 5vh 5vh 5vh 5vh;    
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 7vh;
     border-radius: 100vh;
 }
 #person3{
@@ -570,10 +617,6 @@ th{
 
 
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
 
 @media screen and (max-width: 500px){
     header{
@@ -699,7 +742,7 @@ html, body {
     header{
         grid-template-areas: 
         'ru navlank';
-        grid-template-columns: 45vw 55vw;
+        grid-template-columns: 35vw 65vw;
     }
     .navlank{
         display: flex;
@@ -714,10 +757,22 @@ html, body {
         background-color: var(--navfarg);
         font-size: 3vh;
         font-family: 'Courier New', Courier, monospace;
+        margin-right: 5vw;
 
     }
     nav{ 
         display: none;
+        overflow-y: hidden;
     }
+    
+}
+
+footer{
+    overflow-y: hidden;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+
     
 }
