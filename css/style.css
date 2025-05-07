@@ -6,7 +6,52 @@
     --bakgrundsfarg: rgb(220, 220, 211);
 
 }   
-
+.unna-regular {
+    font-family: "Unna", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .unna-bold {
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .unna-regular-italic {
+    font-family: "Unna", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .unna-bold-italic {
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .thasadith-regular {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .thasadith-bold {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .thasadith-regular-italic {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .thasadith-bold-italic {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
 .menu{
     height: 40vh;
     width: 15vw;
@@ -124,20 +169,22 @@ footer{
     padding: 1vh 1vh 1vh 1vh;
 }
 .fotbild{
-    height: 14vh;
+    height: 10vh;
     background-color: var(--bakgrundsfarg);
 }
 .fottext{
     background-color: var(--bakgrundsfarg);
+    font-family: "Thasadith", sans-serif;
 }
 .fotlank{
     background-color: var(--bakgrundsfarg);
     text-decoration: none;
     color: black;
+    font-family: "Thasadith", sans-serif;
 }
 
 #fotbild1{
-    height: 14vh;
+    height: 10vh;
 }
 
 header{
@@ -165,7 +212,7 @@ header{
     transform: translate(5vw);
     background-color: var(--navfarg);
     font-size: 7vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Unna", serif;
 }
 
 nav{
@@ -189,7 +236,7 @@ nav{
     font-size: 3vh;
     color: black;
     width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Unna", serif;
     
 }
 .navlink{
@@ -234,7 +281,7 @@ button{
     z-index: 10;
     cursor: pointer;    
     background-color: var(--navfarg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Unna", sans-serif;
 }
 
 
@@ -251,8 +298,10 @@ main{
     font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
     width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-family: "Thasadith", sans-serif;
 }
+
 tbody{
     z-index: 6;
 }
@@ -288,11 +337,13 @@ th, td {
 
 td{
     font-size: 4vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Thasadith", sans-serif;
 }
 th{
     font-size: 5vh;
+    font-family: "Unna", sans-serif;
 }
+
 
 
 .curv{
@@ -354,6 +405,7 @@ th{
 #underrubrik2{
     grid-area: ud2;
     z-index: 10;
+    padding-left: 6vh;
     color: var(--bakgrundsfarg);
 }
 .underrubrik{
@@ -362,7 +414,7 @@ th{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5vh;
+    padding-bottom: 2vh;
 
 }
 #section21{
@@ -391,31 +443,41 @@ th{
 .underrubriktext{
     background-color: transparent;
     font-size: 7vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Unna", sans-serif;
 }
 .sectionbrodtext1{
     font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Thasadith", sans-serif;
+    padding-bottom: 2vh;
 }
 .fordelarlist li{
     font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Thasadith", sans-serif;
 }
 .fordelarlist{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 0;
+    font-family: "Thasadith", sans-serif;
+
+    text-transform: initial;
 }
 .sectionbrodtext2{
     font-size: 3.5vh;
     color: var(--bakgrundsfarg);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Thasadith", sans-serif;
+}
+.nackdelarlist li{
+    font-size: 3.5vh;
+
+    font-family: "Thasadith", sans-serif;
 }
 .nackdelarlist{
     color: var(--bakgrundsfarg);
-    font-size: 3.5vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15vh;
+    padding-top: 2vh;
+    font-family: "Thasadith", sans-serif;
+    text-transform: initial;
+    font-size: 3vh;
 }
 
 .curv2{
@@ -457,10 +519,10 @@ th{
     'hd'
     'ur3'
     'gra'
-    'sc31'
+    'main4'
     'foot'
     ;
-    grid-template-rows: 10.5vh 30vh 50vh 50vh 25vh;
+    grid-template-rows: 10.5vh 30vh 50vh 60vh 25vh;
 }
 #underrubrik3{
     grid-area: ur3;
@@ -473,13 +535,21 @@ th{
 #underrubriktext3{
     background-color: transparent;
     font-size: 10vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Unna", sans-serif;
 }
 .gradient{
     grid-area: gra;
     background: linear-gradient(180deg, rgba(220,220,211,1) 0%, rgba(72,57,14,1) 35%);
 }
-#section31{
+
+#main4{
+    grid-area: main4;
+    display: grid;
+    grid-template-areas: 
+    'sc3'
+    ;
+}
+.section31{
     grid-area: sc31;
     background-color: rgb(72, 57, 14);
     display: flex;
@@ -537,7 +607,7 @@ th{
     display: flex;
     flex-direction: column;
     gap: 7vh;
-    border-radius: 100vh;
+    border-radius: 40vh;
 }
 #person2{
     grid-area: per2;
@@ -546,7 +616,7 @@ th{
     display: flex;
     flex-direction: column;
     gap: 7vh;
-    border-radius: 100vh;
+    border-radius: 40vh;
 }
 #person3{
     grid-area: per3;
@@ -555,13 +625,13 @@ th{
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    border-radius: 100vh;
+    border-radius: 40vh;
 }
 
 .brodtext{
     background-color: transparent;
     font-size: 3vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Thasadith", sans-serif;
 }
 .persontext{
     background: transparent;
@@ -571,14 +641,13 @@ th{
    display: flex;
    justify-content: center;
    align-items: center;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   
+   font-family: "Thasadith", sans-serif;
 }
 .personrubrik{
     background-color: transparent;
     font-size: 4vh;
-    margin-top: 2vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 4vh;
+    font-family: "Unna", sans-serif;
 }
 
 
@@ -614,7 +683,11 @@ th{
     transform: translate(90.7%, -29.5%);
 }
 
-
+aside{
+    grid-area: aside;
+    display: none;
+    overflow-y:  hidden;
+}
 
 
 
@@ -693,8 +766,12 @@ th{
     'ud1'
     'sc21'
     'ud2'
-    'sc22';
-    grid-template-rows: 10.5vh 20vh 50vh  20vh 60vh;
+    'sc22'
+    'foot';
+    grid-template-rows: 10.5vh 20vh 50vh 20vh 80vh 25vh;
+    }
+    .nackdelarlist{
+        padding: 0;
     }
 
     #section21{
@@ -731,6 +808,9 @@ th{
     .navlank{
         display: none;
     }
+    .persontext{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 501px){
@@ -756,7 +836,7 @@ th{
         text-decoration: none;
         background-color: var(--navfarg);
         font-size: 3vh;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Unna", serif;
         margin-right: 5vw;
 
     }
@@ -764,6 +844,26 @@ th{
         display: none;
         overflow-y: hidden;
     }
+
+    #wrapper4{
+     
+        grid-template-rows: 10.5vh 30vh 50vh 141vh 25vh;
+    }
+
+    .section31{
+       display: flex;
+
+   
+    }
+    #aside4{
+        display: block;
+        grid-area: aside;
+        z-index: 10;
+       
+        background: transparent;
+    }
+
+    
     
 }
 
