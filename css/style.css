@@ -72,7 +72,6 @@
 .menu-button{
     cursor: pointer;
     display: inline;
- 
 }
 
 .close{
@@ -81,12 +80,15 @@
     display: none;
   
 }
-
+.b1{
+    cursor: pointer;
+    z-index: 11; 
+    display: block;
+}
 .close i.material-icons{
     font-size: 10.5vh;
     background-color: var(--navfarg);
 }
-
 .menu-button i.material-icons{
     font-size: 10.5vh;  
     background-color: var(--navfarg);
@@ -116,6 +118,10 @@
 .close.visible{
     display: block;
 }
+.b1.visible{
+    display: block;
+}
+
 .fade-layer.visible{
     display: block;
 }
@@ -390,7 +396,7 @@ th{
     'sc22'
     'foot'
     ;
-    grid-template-rows: 10.5vh 20vh 40vh 20vh 20vh 40vh 25vh;
+    grid-template-rows: 10.5vh 25vh 45vh 20vh 25vh 45vh 25vh;
 
     width: 100vw;
    
@@ -455,6 +461,7 @@ th{
     font-size: 3.5vh;
     background-color: var(--bakgrundsfarg);
     font-family: "Thasadith", sans-serif;
+    height: 6vh;
 }
 .fordelarlist{
     font-family: "Thasadith", sans-serif;
@@ -466,9 +473,14 @@ th{
     color: var(--bakgrundsfarg);
     font-family: "Thasadith", sans-serif;
 }
+.sectionbrodtext3{
+    font-size: 3.5vh;
+    color: var(--bakgrundsfarg);
+    font-family: "Thasadith", sans-serif;
+}
 .nackdelarlist li{
     font-size: 3.5vh;
-
+    height: 6vh;
     font-family: "Thasadith", sans-serif;
 }
 .nackdelarlist{
@@ -498,7 +510,7 @@ th{
     height: 100%;
     background-color:  var(--bakgrundsfarg);
     z-index: 3;
-    transform: translate(-5%, -30%);
+    transform: translate(-5%, -4%);
 }
 .curv2::after{
     content: '';
@@ -509,7 +521,7 @@ th{
     height: 100%;
     background-color:  rgb(72, 57, 14);
     z-index: 8;
-    transform: translate(90.7%, -29.5%);
+    transform: translate(90.7%, -3.5%);
 }
 
 #wrapper4{
@@ -522,7 +534,7 @@ th{
     'main4'
     'foot'
     ;
-    grid-template-rows: 10.5vh 30vh 50vh 60vh 25vh;
+    grid-template-rows: 10.5vh 30vh 50vh 1fr 25vh;
 }
 #underrubrik3{
     grid-area: ur3;
@@ -555,6 +567,7 @@ th{
     display: flex;
     flex-direction: column;
     transform: translate(0, -30vh);
+    gap: 5vh;
     
 }
 
@@ -642,6 +655,7 @@ th{
    justify-content: center;
    align-items: center;
    font-family: "Thasadith", sans-serif;
+   gap: 3vh;
 }
 .personrubrik{
     background-color: transparent;
@@ -685,10 +699,33 @@ th{
 
 aside{
     grid-area: aside;
-    display: none;
+
     overflow-y:  hidden;
 }
+#wrapper5{
+    display: grid;
+    grid-template-areas: 
+    'hd'
+    'ud5'
+    'main5'
+    'foot'
+    ;
 
+    grid-template-rows: 10.5vh 20vh 1fr 20vh;
+}
+#underrubrik5{
+    grid-area: ud5;
+}
+.main5{
+    grid-area: main5;
+}
+
+.popuptext1{
+    display: none;
+}
+.popuptext1.visible{
+    display: block;
+}
 
 
 @media screen and (max-width: 500px){
@@ -811,6 +848,16 @@ aside{
     .persontext{
         display: none;
     }
+
+    .sectionbrodtext2{
+        display: none;
+    }
+
+    #klippkungenloga{
+        height: 15vh;
+    }
+
+
 }
 
 @media screen and (min-width: 501px){
@@ -852,8 +899,6 @@ aside{
 
     .section31{
        display: flex;
-
-   
     }
     #aside4{
         display: block;
@@ -862,7 +907,12 @@ aside{
        
         background: transparent;
     }
-
+    #klippkungenloga{
+        height: 30vh;
+    }
+    .sectionbrodtext3{
+        display: none;
+    }
     
     
 }

@@ -1,23 +1,41 @@
-document.querySelector(".fade-layer").addEventListener("click", ShowMenu)
 
-document.querySelector(".menu-button").addEventListener("click", ShowMenu)
-document.querySelector(".close").addEventListener("click", ShowMenu)
 document.querySelector(".button1").addEventListener("click", Sortpris)
 document.querySelector(".button2").addEventListener("click", Sortkpk)
 document.querySelector(".button3").addEventListener("click", Sortkoffin)
+document.querySelector(".fade-layer").addEventListener("click", ShowMenu)
+document.querySelector(".menu-button").addEventListener("click", ShowMenu)
+document.querySelector(".close").addEventListener("click", ShowMenu)
+
+
+
+function Showur1() {
+  let show1 = document.querySelector("div.popuptext1")
+  show1.classList.toggle("visible")
+}
 
 
 function ShowMenu() {
 
     let close = document.querySelector("div.close")
+
     let button = document.querySelector("div.menu-button")
 
     let menu = document.querySelector("div.menu")
     close.classList.toggle("visible"), menu.classList.toggle("show"), button.classList.toggle("invisible")
 
     let layer = document.querySelector(".fade-layer")
-    layer.classList.toggle("visible")  
+    layer.classList.toggle("visible") 
+
 }
+
+
+
+
+
+
+
+
+
 
 
 function Sortpris() {
@@ -91,12 +109,4 @@ function Sortkoffin() {
         }
       }
 
-}
-
-function InsertRow(namn,koffin,pris){
-  let table = document.getElementById("Table")
-  let row = table.InsertRow()
-  row.insertCell(0).textcontent = namn
-  row.insertCell(1).textcontent = koffin
-  row.insertCell(2).textcontent = pris
 }
