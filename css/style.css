@@ -80,11 +80,7 @@
     display: none;
   
 }
-.b1{
-    cursor: pointer;
-    z-index: 11; 
-    display: block;
-}
+
 .close i.material-icons{
     font-size: 10.5vh;
     background-color: var(--navfarg);
@@ -118,9 +114,7 @@
 .close.visible{
     display: block;
 }
-.b1.visible{
-    display: block;
-}
+
 
 .fade-layer.visible{
     display: block;
@@ -165,6 +159,15 @@ footer{
     padding: 2vh 2vh 2vh 2vh;
 
 }
+.divfotbilder1{
+    grid-area: divfotbilder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2vh 2vh 2vh 2vh;
+
+}
 .divfottext{
     grid-area: divfottext;
     display: flex;
@@ -174,18 +177,39 @@ footer{
     flex-direction: column;
     padding: 1vh 1vh 1vh 1vh;
 }
+.divfottext1{
+    grid-area: divfottext;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    padding: 1vh 1vh 1vh 1vh;
+}
 .fotbild{
     height: 10vh;
     background-color: var(--bakgrundsfarg);
 }
+.fotbild2{
+    height: 10vh;
+}
 .fottext{
     background-color: var(--bakgrundsfarg);
+    font-family: "Thasadith", sans-serif;
+}
+.fottext1{
+    color: var(--bakgrundsfarg);
     font-family: "Thasadith", sans-serif;
 }
 .fotlank{
     background-color: var(--bakgrundsfarg);
     text-decoration: none;
     color: black;
+    font-family: "Thasadith", sans-serif;
+}
+.fotlank1{
+    text-decoration: none;
+    color:  var(--bakgrundsfarg);
     font-family: "Thasadith", sans-serif;
 }
 
@@ -710,20 +734,123 @@ aside{
     'main5'
     'foot'
     ;
+    background-color: var(--bakgrundsfarg);
+    grid-template-rows: 10.5vh 20vh 1fr 27vh;
 
-    grid-template-rows: 10.5vh 20vh 1fr 20vh;
 }
+#vissainte{
+    display: none;
+}
+
 #underrubrik5{
     grid-area: ud5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bakgrundsfarg);
+    margin: 10vh;
 }
 .main5{
     grid-area: main5;
+    background-color: var(--bakgrundsfarg);
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 25vw 5vh 25vw;
+    gap: 3vh;
 }
 
+
+.main5 h3{
+    background-color: var(--bakgrundsfarg);
+    padding-bottom: 2vh;
+ font-family: "Unna", sans-serif;
+}
+.main5 h4{
+    background-color: var(--bakgrundsfarg);
+    font-weight: normal;
+    font-family: "Thasadith", sans-serif;
+    
+}
+.butten1{
+    cursor: pointer;
+    display: block;
+}
 .popuptext1{
     display: none;
 }
 .popuptext1.visible{
+    display: block;
+}
+.butten2{
+    cursor: pointer;
+    display: block;
+}
+.popuptext2{
+    display: none;
+}
+.popuptext2.visible{
+    display: block;
+}
+.butten3{
+    cursor: pointer;
+    display: block;
+}
+.popuptext3{
+    display: none;
+}
+.popuptext3.visible{
+    display: block;
+}
+.butten4{
+    cursor: pointer;
+    display: block;
+}
+.popuptext4{
+    display: none;
+}
+.popuptext4.visible{
+    display: block;
+}
+.butten5{
+    cursor: pointer;
+    display: block;
+}
+.popuptext5{
+    display: none;
+}
+.popuptext5.visible{
+    display: block;
+}
+.butten6{
+    cursor: pointer;
+    display: block;
+}
+.popuptext6{
+    display: none;
+}
+.popuptext6.visible{
+    display: block;
+}
+.butten7{
+    cursor: pointer;
+    display: block;
+}
+.popuptext7{
+    display: none;
+}
+.popuptext7.visible{
+    display: block;
+}
+.butten8{
+    cursor: pointer;
+    display: block;
+}
+.popuptext8{
+    display: none;
+}
+.popuptext8.visible{
     display: block;
 }
 
@@ -783,7 +910,9 @@ aside{
 
     font-size: 3vh;
     }
-
+    .rubriktext{
+        font-size: 6vh;
+    }
     .sectionbrodtext2{
 
     font-size: 3vh;
@@ -857,7 +986,10 @@ aside{
         height: 15vh;
     }
 
-
+    #fotdiv5{
+        background-color:rgb(72, 57, 14);
+        color:rgb(72, 57, 14);
+    }
 }
 
 @media screen and (min-width: 501px){
