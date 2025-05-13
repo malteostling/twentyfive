@@ -446,7 +446,7 @@ th{
     margin: 0 25vw 5vh 25vw;
     gap: 3vh;
     border-radius: 5VH ;
-    padding: 3vh 3vh 3vh 3vh;
+    padding: 8vh 15vh 8vh 15vh;
 }
 
 
@@ -1042,6 +1042,68 @@ aside{
     .brödtext{
         display: none;
     }
+    #underrubrik21{
+        display: none;
+    }
+    .m2{display: none;}
+
+    .informationbild{
+        width: 90vw;
+    }
+
+    .intevissaspåmobil{display: none;}
+
+    .stegförsteg{
+        display: flex;
+        flex-direction: row;
+        font-size: x-large;
+        color: var(--bakgrundsfarg);
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        font-family: "Unna", sans-serif;;
+        
+    }
+
+    #main4{
+        padding: 10vw 0vw 10vw 0vw;
+    }
+    .sectionbrodtext3{
+        padding: 0 10vw 0 10vw;
+    }
+    #main4{
+    grid-area: main4;
+    display: grid;
+    grid-template-areas: 
+    'sc31'
+    'ud31'
+    'sc32'
+    ;
+    height: 170vh;
+}
+.section32{
+    grid-area: sc32;
+    background-color: rgb(72, 57, 14);
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, -30vh);
+    gap: 5vh;
+    padding: 10vw 0vw 10vw 0vw;
+    
+}
+.underrubrik31{
+    grid-area: ud31;
+    transform: translate(0, -30vh);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Unna", sans-serif;;
+    font-size: large;
+    color: var(--bakgrundsfarg);
+}
+
 }
 
 @media screen and (min-width: 501px){
@@ -1144,6 +1206,18 @@ aside{
         display: flex;
         flex-direction:column;
         margin: 0;
+    }
+    .stegförsteg{
+        display: none;
+    }
+    .intevissaspådator{
+        display: none;
+    }
+    .section32{
+        display: none;
+    }
+    .underrubrik31{
+        display: none;
     }
 }
 
