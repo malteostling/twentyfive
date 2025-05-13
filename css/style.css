@@ -418,14 +418,49 @@ th{
     'buffer'
     'ud2'
     'sc22'
+    'u3'
+    'm2'
     'foot'
     ;
-    grid-template-rows: 10.5vh 25vh 45vh 20vh 25vh 45vh 25vh;
+    grid-template-rows: 10.5vh 25vh 45vh 20vh 25vh 45vh 25vh 1fr 25vh;
 
     width: 100vw;
    
 }
+#underrubrik21{
+    grid-area: u3;
+    z-index: 10;
 
+    color: var(--bakgrundsfarg);
+}
+
+
+.m2{
+    grid-area: m2;
+    background-color: var(--bakgrundsfarg);
+    
+    display: flex;
+    justify-content: center;
+  
+    flex-direction: column;
+    margin: 0 25vw 5vh 25vw;
+    gap: 3vh;
+    border-radius: 5VH ;
+    padding: 3vh 3vh 3vh 3vh;
+}
+
+
+.m2 h3{
+    background-color: var(--bakgrundsfarg);
+    padding-bottom: 2vh;
+ font-family: "Thasadith", sans-serif;
+}
+.m2 h4{
+    background-color: var(--bakgrundsfarg);
+    font-weight: normal;
+    font-family: "Thasadith", sans-serif;
+    
+}
 #underrubrik1{
     grid-area: ud1;
     background-color: var(--bakgrundsfarg);   
@@ -435,7 +470,7 @@ th{
 #underrubrik2{
     grid-area: ud2;
     z-index: 10;
-    padding-left: 6vh;
+
     color: var(--bakgrundsfarg);
 }
 .underrubrik{
@@ -633,7 +668,7 @@ th{
 .personbild{
     height: 50vh;
     background-color: var(--bakgrundsfarg);
-    border: black dotted 1vh;
+  
     padding-left: 3vh;
     padding-right: 3vh;
 }
@@ -644,7 +679,7 @@ th{
     display: flex;
     flex-direction: column;
     gap: 7vh;
-    border-radius: 40vh;
+    border-radius: 20vh;
 }
 #person2{
     grid-area: per2;
@@ -653,7 +688,7 @@ th{
     display: flex;
     flex-direction: column;
     gap: 7vh;
-    border-radius: 40vh;
+    border-radius: 20vh;
 }
 #person3{
     grid-area: per3;
@@ -662,7 +697,7 @@ th{
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    border-radius: 40vh;
+    border-radius: 20vh;
 }
 
 .brodtext{
@@ -757,7 +792,7 @@ aside{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0 25vw 5vh 25vw;
+    margin: 0 15vw 5vh 15vw;
     gap: 3vh;
 }
 
@@ -765,7 +800,7 @@ aside{
 .main5 h3{
     background-color: var(--bakgrundsfarg);
     padding-bottom: 2vh;
- font-family: "Unna", sans-serif;
+ font-family: "Thasadith", sans-serif;
 }
 .main5 h4{
     background-color: var(--bakgrundsfarg);
@@ -957,13 +992,14 @@ aside{
     }
     .brodtext{
         font-size: 2.5vh;
+        display: none;
     }
     #main3{
-        grid-template-rows: 100vh 80vh 80vh;
+        grid-template-rows: 60vh 60vh 60vh;
     }
 
     #wrapper3{
-        grid-template-rows: 10.5vh 60vh 20vh 260vh;
+        grid-template-rows: 10.5vh 60vh 20vh 180vh 25vh;
     }
     .personrubrik{
         font-size: 3vh;
@@ -989,6 +1025,22 @@ aside{
     #fotdiv5{
         background-color:rgb(72, 57, 14);
         color:rgb(72, 57, 14);
+    }
+    .personbildmobil{
+        background-color: var(--bakgrundsfarg);
+        height: 30vh;
+        margin: 0;
+    }
+    .persontext{
+        margin: 0;
+    }
+    .brodtextmobil{
+    background-color: transparent;
+    padding: 5vh;
+    font-family: "Thasadith", sans-serif;
+    }
+    .brödtext{
+        display: none;
     }
 }
 
@@ -1046,7 +1098,53 @@ aside{
         display: none;
     }
     
-    
+    .personbildmobil{
+        display: none;
+    }
+    .brodtextmobil{
+        font-size: 2.5vh;
+        display: none;
+    }
+    #wrapper3{
+        grid-template-rows: 10.5vh 60vh 20vh 240vh 25vh;
+    }
+
+    #main3{
+         
+        grid-template-areas: 
+       'per1 per2'
+        'per3 -'
+        ;
+        grid-row: 50vw 50vw;
+        margin: 0;
+        padding: 0;
+    }
+    #person1{
+        width: 35vw;
+        height: 100vh;
+        transform: translate(22vw, 0);
+        padding-top: 5VH;
+    }
+
+    #person2{
+        width: 35vw;
+        height: 100vh;
+        transform: translate(-22vw, 0);
+        padding-top: 5VH;
+  
+    }
+    #person3{
+        width: 35vw;
+        height: 100vh;
+        transform: translate(47vw, 20vh);
+        padding-top: 5VH;
+       
+    }
+    .persontext{
+        display: flex;
+        flex-direction:column;
+        margin: 0;
+    }
 }
 
 footer{
